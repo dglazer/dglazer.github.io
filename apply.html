@@ -20,13 +20,14 @@ I will not share this data with anyone who doesn't already have access.<br>
 
 <script>
   function validateForm() {
-    var v1 = document.forms["form1"]["n1"].value;
-    var v2 = document.forms["form1"]["n2"].value;
-    var v3 = document.forms["form1"]["n3"].value;
-    if (! (v1 == "v1" && v2=="v2" && v3=="v3") {
+    var c1 = document.forms["form1"]["n1"].checked;
+    var c2 = document.forms["form1"]["n2"].checked;
+    var c3 = document.forms["form1"]["n3"].checked;
+    if (! (c1 && c2 && c3) {
         alert("You need to agree to all of the terms.");
         return false;
     }
+    alert("Welcome aboard! Happy discovering.")
     return true;
 }
 </script>
