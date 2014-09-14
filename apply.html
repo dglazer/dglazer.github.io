@@ -1,7 +1,7 @@
 
 I agree to the Tree of Life code of conduct:
 
-<form>
+<form name="form1" onsubmit="return validateForm()">
 <input type="checkbox" name="n1" value="v1">
   I will use this data for good.<br>
 </input>
@@ -17,3 +17,16 @@ I will not share this data with anyone who doesn't already have access.<br>
 <input type="submit" value"Apply"</input
 
 </form>
+
+<script>
+  function validateForm() {
+    var v1 = document.forms["form1"]["n1"].value;
+    var v2 = document.forms["form1"]["n2"].value;
+    var v3 = document.forms["form1"]["n3"].value;
+    if (! (v1 == "v1" && v2=="v2" && v3=="v3") {
+        alert("You need to agree to all of the terms.");
+        return false;
+    }
+    return true;
+}
+</script>
